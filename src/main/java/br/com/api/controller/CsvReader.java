@@ -31,7 +31,7 @@ public class CsvReader {
 	@GetMapping("/ReadCsv")
 	public List<String> retornarRequisicoes() throws IOException {
 		
-		Path path = Paths.get("C:\\Users\\Leandro Jorge\\Desktop\\Atividades.csv");
+		Path path = Paths.get(System.getenv("CSVFILE"));
 		String line = "";
 		List<String> dados = new ArrayList<String>();
 		

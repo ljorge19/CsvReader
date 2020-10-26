@@ -21,7 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public class ServerStatusControllerTest {
+public class CsvReaderTest {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -29,7 +29,7 @@ public class ServerStatusControllerTest {
 	@Test
 	public void Teste_retornarClassificacaoOficios() throws Exception {
 		
-		mockMvc.perform(get("/ServerStatus").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
+		mockMvc.perform(get("/ReadCsv").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
 	}
 
 }
